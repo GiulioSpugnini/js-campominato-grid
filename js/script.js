@@ -11,12 +11,14 @@ const difficulty = document.getElementById('difficulty');
 const diff1 = document.getElementById('diff1');
 const diff2 = document.getElementById('diff2');
 const diff3 = document.getElementById('diff3');
-let rows = 10;
-let columns = 10;
-let totalCells = rows * columns;
+
+
 
 // #FUNZIONI
-function createCells() {
+function createCells(rows, columns, totalCells) {
+    rows = 10;
+    columns = 10;
+    totalCells = rows * columns;
     for (let i = 0; i < totalCells; i++) {
         const cell = document.createElement('div');
         cell.className = 'cell';
@@ -28,7 +30,7 @@ function createCells() {
 
 }
 
-function selectedCell() {
+function selectedCell(totalCells) {
     for (let i = 0; i < totalCells; i++) {
         const cell = createCells();
         cell.addEventListener('click', function() {
@@ -42,19 +44,16 @@ function selectedCell() {
 difficulty.addEventListener('change', (event) => {
     switch (event.target.value) {
         case "1":
-            rows = 10;
-            columns = 10;
-            selectedCell();
+            createCells(10, 10, 100);
+            selectedCell(100);
             break;
         case "2":
-            rows = 10;
-            columns = 10;
-            selectedCell();
+            createCells(10, 8, 82);
+            selectedCell(100);
             break;
         case "3":
-            rows = 10;
-            columns = 10;
-            selectedCell();
+            createCells(10, 5, 50);
+            selectedCell(50);
     }
 
 });
