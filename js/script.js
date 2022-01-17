@@ -8,16 +8,24 @@ console.log('JS OK!');
 // #ELEMENTI DA UTILIZZARE
 const grid = document.getElementById('grid');
 const difficulty = document.getElementById('difficulty');
-const rows = 10;
-const columns = 10;
-const totalCells = rows * columns;
+const diff1 = document.getElementById('diff1');
+const diff2 = document.getElementById('diff2');
+const diff3 = document.getElementById('diff3');
+let rows = 10;
+let columns = 10;
+let totalCells = rows * columns;
 
 // #FUNZIONI
 function createCells() {
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    grid.appendChild(cell);
-    return cell;
+    for (let i = 0; i < totalCells; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        grid.appendChild(cell);
+
+        cell.setAttribute('id', i + 1);
+        return cell;
+    }
+
 }
 
 function selectedCell() {
@@ -30,10 +38,47 @@ function selectedCell() {
     }
 }
 
-function setNumberCell() {
-    for (let i = 0; i < totalCells; i++) {
-        const cell = createCells();
-        cell.setAttribute('id', i + 1);
+// !PROGRAMMA
+difficulty.addEventListener('change', (event) => {
+    switch (event.target.value) {
+        case "1":
+            rows = 10;
+            columns = 10;
+            selectedCell();
+            break;
+        case "2":
+            rows = 10;
+            columns = 10;
+            selectedCell();
+            break;
+        case "3":
+            rows = 10;
+            columns = 10;
+            selectedCell();
     }
-}
-setNumberCell();
+
+});
+
+
+
+
+// diff1.addEventListener('click', function() {
+
+
+
+
+// })
+// diff2.addEventListener('change', function() {
+//     rows = 10;
+//     columns = 8;
+//     selectedCell();
+
+
+// })
+// diff3.addEventListener('change', function() {
+//     rows = 10;
+//     columns = 5;
+//     selectedCell();
+
+
+// })

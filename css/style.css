@@ -35,6 +35,10 @@ body {
     width: calc(100% /10);
 }
 
+.d-none {
+    display: none;
+}
+
 
 /* COLORS */
 
