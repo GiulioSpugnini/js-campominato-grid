@@ -8,29 +8,27 @@ console.log('JS OK!');
 // #ELEMENTI DA UTILIZZARE
 const grid = document.getElementById('grid');
 const difficulty = document.getElementById('difficulty');
-const diff1 = document.getElementById('diff1');
-const diff2 = document.getElementById('diff2');
-const diff3 = document.getElementById('diff3');
+
 
 
 
 // #FUNZIONI
-function createCells(totalCells) {
-    totalCells = 100;
-    for (let i = 0; i < totalCells; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'cell';
-        grid.appendChild(cell);
+function createCell(index) {
 
-        cell.setAttribute('id', i + 1);
-        return cell;
-    }
+
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    grid.appendChild(cell);
+
+    cell.setAttribute('id', index + 1);
+    return cell;
+
 
 }
 
 function selectedCell(totalCells) {
     for (let i = 0; i < totalCells; i++) {
-        const cell = createCells();
+        const cell = createCell(i);
         cell.addEventListener('click', function() {
             cell.classList.toggle('bg-lightblue');
 
@@ -40,50 +38,24 @@ function selectedCell(totalCells) {
 
 // !PROGRAMMA
 difficulty.addEventListener('change', (event) => {
+    grid.innerHTML = '';
     switch (event.target.value) {
         case "1":
 
             selectedCell(100);
-            diff2.classList.add('d-none');
-            diff3.classList.add('d-none');
+
             break;
         case "2":
 
             selectedCell(80);
-            diff1.classList.add('d-none');
-            diff3.classList.add('d-none');
+
 
             break;
         case "3":
 
             selectedCell(50);
-            diff1.classList.add('d-none');
-            diff2.classList.add('d-none');
+
 
     }
 
 });
-
-
-
-
-// diff1.addEventListener('click', function() {
-
-
-
-
-// })
-// diff2.addEventListener('change', function() {
-//     rows = 10;
-//     columns = 8;
-//     selectedCell();
-
-
-// })
-// diff3.addEventListener('change', function() {
-//     rows = 10;
-//     columns = 5;
-//     selectedCell();
-
-
-// })

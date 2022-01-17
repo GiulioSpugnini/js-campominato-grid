@@ -31,6 +31,19 @@ body {
 
 .cell {
     border: 1px solid white;
+}
+
+.cellEasy {
+    height: calc(100% /5);
+    width: calc(100% /5);
+}
+
+.cellNormal {
+    height: calc(100% /8);
+    width: calc(100% /8);
+}
+
+.cellHard {
     height: calc(100% /10);
     width: calc(100% /10);
 }
