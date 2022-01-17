@@ -9,21 +9,14 @@ console.log('JS OK!');
 const grid = document.getElementById('grid');
 const difficulty = document.getElementById('difficulty');
 
-
-
-
 // #FUNZIONI
 function createCell(index) {
-
-
     const cell = document.createElement('div');
     cell.className = 'cell';
     grid.appendChild(cell);
-
     cell.setAttribute('id', index + 1);
+    cell.innerText = cell.id;
     return cell;
-
-
 }
 
 function selectedCell(totalCells) {
@@ -31,7 +24,6 @@ function selectedCell(totalCells) {
         const cell = createCell(i);
         cell.addEventListener('click', function() {
             cell.classList.toggle('bg-lightblue');
-
         })
     }
 }
@@ -41,21 +33,13 @@ difficulty.addEventListener('change', (event) => {
     grid.innerHTML = '';
     switch (event.target.value) {
         case "1":
-
             selectedCell(100);
-
             break;
         case "2":
-
             selectedCell(80);
-
-
             break;
         case "3":
-
             selectedCell(50);
-
-
     }
 
 });
