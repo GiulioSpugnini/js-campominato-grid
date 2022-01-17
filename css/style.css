@@ -22,7 +22,15 @@ body {
 
 #grid {
     border: 1px solid black;
-    height: 600px;
     width: 600px;
+    height: 600px;
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid white;
+    height: calc(100% /10);
+    width: calc(100% /10);
 }
