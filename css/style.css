@@ -34,3 +34,10 @@ body {
     height: calc(100% /10);
     width: calc(100% /10);
 }
+
+
+/* COLORS */
+
+.bg-lightblue {
+    background-color: lightskyblue;
+}

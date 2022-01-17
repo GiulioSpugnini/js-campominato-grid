@@ -13,11 +13,27 @@ const columns = 10;
 const totalCells = rows * columns;
 
 // #FUNZIONI
-function createCells(totalCells) {
+function createCells() {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    grid.appendChild(cell);
+    return cell;
+}
+
+function selectedCell() {
     for (let i = 0; i < totalCells; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'cell';
-        grid.appendChild(cell);
+        const cell = createCells();
+        cell.addEventListener('click', function() {
+            cell.classList.toggle('bg-lightblue');
+
+        })
     }
 }
-createCells(totalCells);
+
+function setNumberCell() {
+    for (let i = 0; i < totalCells; i++) {
+        const cell = createCells();
+        cell.setAttribute('id', i + 1);
+    }
+}
+setNumberCell();
