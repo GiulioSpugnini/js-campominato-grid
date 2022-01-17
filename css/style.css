@@ -31,6 +31,8 @@ body {
 
 .cell {
     border: 1px solid white;
+    height: calc(100% /10);
+    width: calc(100% /10);
 }
 
 .cellEasy {
