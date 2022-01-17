@@ -15,10 +15,8 @@ const diff3 = document.getElementById('diff3');
 
 
 // #FUNZIONI
-function createCells(rows, columns, totalCells) {
-    rows = 10;
-    columns = 10;
-    totalCells = rows * columns;
+function createCells(totalCells) {
+    totalCells = 100;
     for (let i = 0; i < totalCells; i++) {
         const cell = document.createElement('div');
         cell.className = 'cell';
@@ -44,20 +42,20 @@ function selectedCell(totalCells) {
 difficulty.addEventListener('change', (event) => {
     switch (event.target.value) {
         case "1":
-            createCells(10, 10, 100);
+
             selectedCell(100);
             diff2.classList.add('d-none');
             diff3.classList.add('d-none');
             break;
         case "2":
-            createCells(10, 8, 82);
-            selectedCell(100);
+
+            selectedCell(80);
             diff1.classList.add('d-none');
             diff3.classList.add('d-none');
 
             break;
         case "3":
-            createCells(10, 5, 50);
+
             selectedCell(50);
             diff1.classList.add('d-none');
             diff2.classList.add('d-none');
