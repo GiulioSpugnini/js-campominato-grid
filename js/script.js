@@ -46,14 +46,22 @@ difficulty.addEventListener('change', (event) => {
         case "1":
             createCells(10, 10, 100);
             selectedCell(100);
+            diff2.classList.add('d-none');
+            diff3.classList.add('d-none');
             break;
         case "2":
             createCells(10, 8, 82);
             selectedCell(100);
+            diff1.classList.add('d-none');
+            diff3.classList.add('d-none');
+
             break;
         case "3":
             createCells(10, 5, 50);
             selectedCell(50);
+            diff1.classList.add('d-none');
+            diff2.classList.add('d-none');
+
     }
 
 });
