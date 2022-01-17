@@ -32,6 +32,9 @@ body {
     border: 1px solid white;
     height: calc(100% /10);
     width: calc(100% /10);
+    color: orange;
+    text-align: center;
+    line-height: 50px;
 }
 
 .cellEasy {
