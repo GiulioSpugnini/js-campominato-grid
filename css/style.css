@@ -21,8 +21,7 @@ body {
 }
 
 #grid {
-    max-width: 500px;
-    max-height: 600px;
+    max-width: 600px;
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -32,24 +31,22 @@ body {
     border: 1px solid white;
     color: orange;
     text-align: center;
+    padding: 20px;
 }
 
 .cellEasy {
-    height: calc(100% /5);
-    width: calc(100% /5);
-    line-height: 70px;
+    height: calc(100% /7);
+    width: calc(100% /7);
 }
 
 .cellNormal {
-    height: calc(100% /8);
-    width: calc(100% /8);
-    line-height: 50px;
+    height: calc(100% /9);
+    width: calc(100% /9);
 }
 
 .cellHard {
     height: calc(100% /10);
     width: calc(100% /10);
-    line-height: 30px;
 }
 
 .d-none {

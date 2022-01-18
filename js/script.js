@@ -43,10 +43,10 @@ difficulty.addEventListener('change', (event) => {
             selectedCell(100, setLevel(100));
             break;
         case "2":
-            selectedCell(80, setLevel(80));
+            selectedCell(81, setLevel(81));
             break;
         case "3":
-            selectedCell(50, setLevel(50));
+            selectedCell(49, setLevel(49));
     }
 
 });
