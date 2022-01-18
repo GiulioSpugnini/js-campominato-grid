@@ -31,9 +31,9 @@ function selectedCell(totalCells, level) {
 
 function setLevel(diff) {
     let result;
-    if (diff <= 50) return result = 'cellEasy';
+    if (diff <= 50) return result = 'cellHard';
     else if (diff > 50 && diff < 100) return result = 'cellNormal';
-    else return result = 'cellHard';
+    else return result = 'cellEasy';
 }
 // !PROGRAMMA
 difficulty.addEventListener('change', (event) => {

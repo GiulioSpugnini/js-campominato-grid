@@ -34,7 +34,7 @@ body {
     padding: 20px;
 }
 
-.cellEasy {
+.cellHard {
     height: calc(100% /7);
     width: calc(100% /7);
 }
@@ -44,7 +44,7 @@ body {
     width: calc(100% /9);
 }
 
-.cellHard {
+.cellEasy {
     height: calc(100% /10);
     width: calc(100% /10);
 }
