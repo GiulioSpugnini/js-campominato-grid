@@ -19,27 +19,34 @@ function createCell(index) {
     return cell;
 }
 
-function selectedCell(totalCells) {
+function selectedCell(totalCells, level) {
     for (let i = 0; i < totalCells; i++) {
         const cell = createCell(i);
+        cell.classList.add(level);
         cell.addEventListener('click', function() {
             cell.classList.toggle('bg-lightblue');
         })
     }
 }
 
+function setLevel(diff) {
+    let result;
+    if (diff <= 50) return result = 'cellEasy';
+    else if (diff > 50 && diff < 100) return result = 'cellNormal';
+    else return result = 'cellHard';
+}
 // !PROGRAMMA
 difficulty.addEventListener('change', (event) => {
     grid.innerHTML = '';
     switch (event.target.value) {
         case "1":
-            selectedCell(100);
+            selectedCell(100, setLevel(100));
             break;
         case "2":
-            selectedCell(80);
+            selectedCell(80, setLevel(80));
             break;
         case "3":
-            selectedCell(50);
+            selectedCell(50, setLevel(50));
     }
 
 });
